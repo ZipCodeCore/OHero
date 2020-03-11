@@ -6,8 +6,8 @@ public class Hero extends Character{
 
     private Inventory heroInventory;
 
-    public Hero(Long id, String characterName) {
-        super(id, characterName);
+    public Hero( String characterName) {
+        super(characterName);
     }
 
     public Inventory getHeroInventory() {

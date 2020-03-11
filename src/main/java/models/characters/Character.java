@@ -8,8 +8,7 @@ public abstract class Character {
     private Stats stats;
 
 
-    public Character(Long id, String characterName) {
-        this.id = id;
+    public Character(String characterName) {
         this.name = characterName;
         this.stats = new Stats();
     }
@@ -28,6 +27,13 @@ public abstract class Character {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public Stats getStats() {
+        return stats;
+    }
+
+    public void setStats(Stats stats) {
+        this.stats = stats;
     }
 
 

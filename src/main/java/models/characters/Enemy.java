@@ -5,7 +5,7 @@ public class Enemy extends Character{
     private String type;
 
     public Enemy(Long id, String name, String enemyType) {
-        super(id, name);
+        super(name);
         this.type = enemyType;
     }
 }
