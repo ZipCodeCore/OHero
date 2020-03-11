@@ -2,13 +2,13 @@ package models.characters;
 
 import models.utility.Stats;
 
-public abstract class Character {
+public abstract class CharacterModel {
     private Long id;
     private String name;
     private Stats stats;
 
 
-    public Character(String characterName) {
+    public CharacterModel(String characterName) {
         this.name = characterName;
         this.stats = new Stats();
     }

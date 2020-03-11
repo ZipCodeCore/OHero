@@ -51,6 +51,14 @@ public class Stats {
         this.intellect = intellect;
     }
 
+    public Integer increaseIntel(Integer modifier){
+        return this.intellect = this.intellect + modifier;
+    }
+
+    public Integer decreaseIntel(Integer modifier){
+        return this.intellect = this.intellect - modifier;
+    }
+
     public Integer getHealth() {
         return health;
     }
@@ -58,4 +66,6 @@ public class Stats {
     public void setHealth(Integer health) {
         this.health = health;
     }
+
+
 }

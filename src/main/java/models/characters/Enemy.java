@@ -1,6 +1,6 @@
 package models.characters;
 
-public class Enemy extends Character{
+public class Enemy extends CharacterModel {
 
     private String type;
 

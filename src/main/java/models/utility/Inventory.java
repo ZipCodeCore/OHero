@@ -6,6 +6,7 @@ public class Inventory {
     private ArrayList<Item> itemStash;
 
     public Inventory() {
+        itemStash = new ArrayList<Item>();
 
     }
 
