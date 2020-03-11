@@ -17,10 +17,10 @@
     * Text to be read by The Player (including menus) should be handled in an Object Oriented, single responsibility way. IE, make a class to handle display, reduce duplicated code as much as possible.
   * `Character` Abstraction
     * There will be many kinds of characters. The Player will have a Hero, there will be NPCs, bosses, other entities within the game. How will you handle that while duplicating the least amount of code?
-  * `The Game Loop` interface
+  * `The Game Loop`
     * This game must continue running until either:
-      *A: The player intentionally exits or,
-      *B: The game comes to an end.
+       A: The player intentionally exits or,
+       B: The game comes to an end.
   * `Inventory and Collections`
     * How will you have the application track different characters, The Player's character inventory, and a reflection upon stats?
   * `Random Encounters`
