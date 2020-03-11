@@ -10,6 +10,7 @@ public class GameEngine {
     private ConsoleManager gameConsole = new ConsoleManager();
     private HeroWarehouse characterCollection = new HeroWarehouse();
 
+
     private Hero playerHero;
 
 
