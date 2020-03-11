@@ -62,10 +62,7 @@ public class GameEngine {
 
 
 
-    public Boolean yesOrNoCheck(String yesOrNo){
-        if(yesOrNo.equalsIgnoreCase("yes")){
-            return true;
-        }
-        return false;
+    private Boolean yesOrNoCheck(String yesOrNo){
+        return yesOrNo.equalsIgnoreCase("yes");
     }
 }
