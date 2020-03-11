@@ -5,7 +5,7 @@
 
 ## Minimum Viable Product (MVP)
 * This game must have certain features to be viable:
-  * Interaction of multiple characters (The Player, NPCs of some kind)
+  * Interaction of multiple models.characters (The Player, NPCs of some kind)
   * Player choices must somehow affect stats of The Player
   * Stats must be applied within interactions
   * A functional inventory
@@ -16,15 +16,15 @@
   * `Display` class
     * Text to be read by The Player (including menus) should be handled in an Object Oriented, single responsibility way. IE, make a class to handle display, reduce duplicated code as much as possible.
   * `Character` Abstraction
-    * There will be many kinds of characters. The Player will have a Hero, there will be NPCs, bosses, other entities within the game. How will you handle that while duplicating the least amount of code?
+    * There will be many kinds of models.characters. The Player will have a Hero, there will be NPCs, bosses, other entities within the game. How will you handle that while duplicating the least amount of code?
   * `The Game Loop`
     * This game must continue running until either:
        A: The player intentionally exits or,
        B: The game comes to an end.
   * `Inventory and Collections`
-    * How will you have the application track different characters, The Player's character inventory, and a reflection upon stats?
+    * How will you have the application track different models.characters, The Player's character inventory, and a reflection upon stats?
   * `Random Encounters`
-    * Utilizing Dice and other known tools, create a means of randomizing encounters, initial stats rolls for characters, or otherwise.
+    * Utilizing Dice and other known tools, create a means of randomizing encounters, initial stats rolls for models.characters, or otherwise.
   * `Testing`
     * Is not optional. Any portion of your code base which can be tested, should be tested using TDD.
 
