@@ -79,13 +79,22 @@ public class GameEngine {
         }
     }
 
-    public void firstEncounter(){
-        gameDisplay.printMessage("You have three choices! \n" +
-                "1: Go through the door ahead of you. \n" +
-                "2: Climb into a nearby vent. \n" +
-                "3: Stand still.");
-    }
+    public void encounter() {
+        gameDisplay.printMessage("Choose your Adventure! \n" +
+                "1: Ninja Turtles. \n" +
+                "2: Snow Spy. \n" +
+                "3: Shaolin Monk.");
+        if (gameConsole.playerInput().equals("1")) {
+            gameDisplay.printMessage("Turtle Power! You must now defeat the foot clan to catch up with SHREDDER!");
+        }
+         else if (gameConsole.playerInput().equals("2")) {
+            gameDisplay.printMessage("A blizzard is coming, find cover");
+        }
+        else if (gameConsole.playerInput().equals("3")) {
+            gameDisplay.printMessage("You must train to defeat your enemies");
+        }
 
+    }
 
 
 

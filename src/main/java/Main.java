@@ -9,6 +9,6 @@ public class Main {
         newGame.nameAndStoreHero();
         newGame.startingStats();
         newGame.bagCheck();
-        newGame.firstEncounter();
+        newGame.encounter();
     }
 }
