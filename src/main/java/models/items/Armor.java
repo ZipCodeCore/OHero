@@ -2,7 +2,7 @@ package models.items;
 
 public class Armor extends Item {
     private String name;
-    private int strengthValue;
+    private int armorStrength;
 
     public String getName() {
         return name;
@@ -12,17 +12,11 @@ public class Armor extends Item {
         this.name = name;
     }
 
-    public int getStrengthValue() {
-        return strengthValue;
+    public int getArmorStrength() {
+        return armorStrength;
     }
 
-    public void setStrengthValue(int strengthValue) {
-        this.strengthValue = strengthValue;
+    public void setArmorStrength(int armorStrength) {
+        this.armorStrength = armorStrength;
     }
-
-
-
-
-
-
 }
