@@ -85,9 +85,19 @@ public class GameEngine {
                 "1: Go through the door ahead of you. \n" +
                 "2: Climb into a nearby vent. \n" +
                 "3: Stand still.");
+
+//        if(gameConsole.playerInput().equals("2")){
+//            gameDisplay.printMessage("You are in the sewer!");
+//        }
+//
+//        if(gameConsole.playerInput().equals("1")){
+//            gameDisplay.printMessage("You are in a dank old room.");
+//        }
     }
 
+    public static void checkFightHealth() {
 
+    }
 
 
     private Boolean yesOrNoCheck(String yesOrNo){
