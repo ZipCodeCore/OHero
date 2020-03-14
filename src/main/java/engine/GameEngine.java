@@ -35,27 +35,27 @@ public class GameEngine {
         }
     }
 
-//    public void startingStats() {
-//        gameDisplay.printMessage("If this weren't a lazy demo, you would select your starting stats here! \n" +
-//                "Consider having the player start from archetypes rather than choosing individual stats! \n" +
-//                "Also, look into the relationship between the Stats and CharacterModel class to understand how that could be managed. \n" +
-//                "An example would be allowing the user to input 'Bruiser' and giving them high Health and Strength stats! \n" +
-//                "Use your imagination! Remember: Design and write tests FIRST! Understand what you need to get the job done.");
-//
-//        gameDisplay.printMessage("Set your starting Dexterity.");
-//        characterCollection.getCharacterModelStorage().get(0).getStats().setDexterity(Integer.valueOf(gameConsole.playerInput()));
-//        gameDisplay.printMessage("Set your starting Energy.");
-//        characterCollection.getCharacterModelStorage().get(0).getStats().setEnergy(Integer.valueOf(gameConsole.playerInput()));
-//        gameDisplay.printMessage("Set your starting Strength.");
-//        characterCollection.getCharacterModelStorage().get(0).getStats().setStrength(Integer.valueOf(gameConsole.playerInput()));
-//        gameDisplay.printMessage("Set your starting Intellect.");
-//        characterCollection.getCharacterModelStorage().get(0).getStats().setIntellect(Integer.valueOf(gameConsole.playerInput()));
-//        gameDisplay.printMessage("Set your starting Health.");
-//        characterCollection.getCharacterModelStorage().get(0).getStats().setHealth(Integer.valueOf(gameConsole.playerInput()));
-//        //That's a lot of repetitive code. Do this better!
-//        //You'll also note that arbitrary values can be input here - the player could make themselves impossibly strong!
-//        //Apply better code practices and constraints to keep both of these terrible things from happening!
-//    }
+    public void startingStats() {
+        gameDisplay.printMessage("If this weren't a lazy demo, you would select your starting stats here! \n" +
+                "Consider having the player start from archetypes rather than choosing individual stats! \n" +
+                "Also, look into the relationship between the Stats and CharacterModel class to understand how that could be managed. \n" +
+                "An example would be allowing the user to input 'Bruiser' and giving them high Health and Strength stats! \n" +
+                "Use your imagination! Remember: Design and write tests FIRST! Understand what you need to get the job done.");
+
+        gameDisplay.printMessage("Set your starting Dexterity.");
+        characterCollection.getCharacterModelStorage().get(0).getStats().setDexterity(Integer.valueOf(gameConsole.playerInput()));
+        gameDisplay.printMessage("Set your starting Energy.");
+        characterCollection.getCharacterModelStorage().get(0).getStats().setEnergy(Integer.valueOf(gameConsole.playerInput()));
+        gameDisplay.printMessage("Set your starting Strength.");
+        characterCollection.getCharacterModelStorage().get(0).getStats().setStrength(Integer.valueOf(gameConsole.playerInput()));
+        gameDisplay.printMessage("Set your starting Intellect.");
+        characterCollection.getCharacterModelStorage().get(0).getStats().setIntellect(Integer.valueOf(gameConsole.playerInput()));
+        gameDisplay.printMessage("Set your starting Health.");
+        characterCollection.getCharacterModelStorage().get(0).getStats().setHealth(Integer.valueOf(gameConsole.playerInput()));
+        //That's a lot of repetitive code. Do this better!
+        //You'll also note that arbitrary values can be input here - the player could make themselves impossibly strong!
+        //Apply better code practices and constraints to keep both of these terrible things from happening!
+    }
 
     public void bagCheck() {
         gameDisplay.printMessage("You've got stats now. You don't have anything in your inventory. You'll be fine. \n" +
@@ -88,29 +88,19 @@ public class GameEngine {
                 "1: Head to the sewers. \n" +
                 "2: Exit the building into the snow storm. \n" +
                 "3: Enter through the bamboo doorway into the Shaolin temple");
-    }
-         public static class adventure {
-            enum Adventure {
-                NINJATURTLES,
-                SPY,
-                MONK;
 
-                switch (gameConsole.playerInput()) {
-                    case NINJATURTLES:
+                String choice = gameConsole.playerInput();
+                switch (choice) {
+                    case "1":
                         gameDisplay.printMessage("You are now in the sewer!");
                         break;
-                    case SPY:
+                    case "2":
                         gameDisplay.printMessage("Look for cover, a blizzard is coming!");
                         break;
-                    case MONK:
+                    case "3":
                         gameDisplay.printMessage("Welcome to the dojo!");
                         break;
                 }
-
             }
-
-
-
         }
-    }
-}
+
