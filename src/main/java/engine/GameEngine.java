@@ -95,6 +95,9 @@ public class GameEngine {
 //        }
     }
 
+    /**
+     * need to make a checkFightHealthMethod to check health stats during fights
+     */
     public static void checkFightHealth() {
 
     }
