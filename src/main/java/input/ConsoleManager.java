@@ -15,5 +15,12 @@ public class ConsoleManager {
         return playerConsoleInput.nextLine();
     }
 
-
+//    public int playerInt(){
+//        int returnInt = 0;
+//        while (returnInt != 0){
+//            System.out.println("Please enter number.");
+//            returnInt = Integer.parseInt(playerConsoleInput.nextLine());
+//        }
+//        return returnInt;
+//    }
 }
