@@ -1,5 +1,6 @@
 package engine;
 
+import games.Blizzard;
 import input.ConsoleManager;
 import models.characters.Hero;
 import models.utility.HeroWarehouse;
@@ -32,6 +33,7 @@ public class GameEngine {
         } else {
             gameDisplay.printMessage("Oh. Then what is your name?");
             playerHero.setName(gameConsole.playerInput());
+            gameDisplay.printMessage("Ok then your name is " + playerHero.getName() + "\nGreat. Nice to meet you " + playerHero.getName());
         }
     }
 
@@ -92,24 +94,35 @@ public class GameEngine {
 
 
     public void encounter() {
-        gameDisplay.printMessage("You have three choices! \n" +
+        gameDisplay.printMessage("\nYou have three game choices! \n" +
                 "1: Head to the sewers. \n" +
                 "2: Exit the building into the snow storm. \n" +
-                "3: Enter through the bamboo doorway into the Shaolin temple");
+                "3: Enter through the bamboo doorway into the Shaolin temple\n" +
+                "4: To EXIT.");
 
-                String choice = gameConsole.playerInput();
-                switch (choice) {
-                    case "1":
-                        gameDisplay.printMessage("You are now in the sewer!");
-                        break;
-                    case "2":
-                        //Blizzard.start(characterCollection);
-                        gameDisplay.printMessage("Look for cover, a blizzard is coming!");
-                        break;
-                    case "3":
-                        gameDisplay.printMessage("Welcome to the dojo!");
-                        break;
+        String choice = gameConsole.playerInput();
+
+        while (choice != "abort") {
+            switch (choice) {
+                case "1":
+                    gameDisplay.printMessage("You are now in the sewer!");
+                    break;
+                case "2":
+                    gameDisplay.printMessage("Look for cover, a blizzard is coming!");
+                    Blizzard.start(characterCollection);
+                    break;
+                case "3":
+                    gameDisplay.printMessage("Welcome to the dojo!");
+                    break;
+                case "4":
+                    gameDisplay.printMessage("Thank you have a nice day");
+                    return;
+                default:
+                    gameDisplay.printMessage("Please choose 1, 2, 3, or 4.");
+                    break;
                 }
+                choice = gameConsole.playerInput();
             }
         }
+    }
 
