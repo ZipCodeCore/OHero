@@ -11,4 +11,5 @@ public class Main {
         newGame.bagCheck();
         newGame.encounter();
     }
+
 }
