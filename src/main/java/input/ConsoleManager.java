@@ -14,4 +14,5 @@ public class ConsoleManager {
         return playerConsoleInput.nextLine();
     }
 
+
 }
