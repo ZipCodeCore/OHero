@@ -10,8 +10,8 @@ public class ShaolimWarriorGame {
     private static int enemyHealth = 100;
     private static String enemyName = "Bolo";
     private static double enemyMoveChoice = Math.ceil(Math.random()*3);
-    private static String playerName = "playerHero.getName()";
-    private static int playerHealth = 0;
+    private static String playerName;
+    private static int playerHealth;
     private static boolean alive = false;
     private static Display gameDisplay = new Display();
     private static Item scroll;
@@ -30,6 +30,10 @@ public class ShaolimWarriorGame {
                 "You have traveled to Kāimíng to exact your revenge for the the honor of your master \n" +
                 "You enter the enemies dojo." +enemyName + " is knealing in meditation. \n" +
                 "He raises his head. You lock eyes and he rises to fight you.");
+        playerHealth = currentPlayer.getStats().getHealth();
+        playerName = currentPlayer.getName();
+        gameDisplay.printMessage(enemyName + " has " + enemyHealth + " health remaining.");
+        gameDisplay.printMessage(playerName + " has " + playerHealth + " health remaining.");
         }
 
     public void checkGameHealth(){
@@ -51,8 +55,9 @@ public class ShaolimWarriorGame {
 
         public void fightTime(){
         while (alive){
-            gameDisplay.printMessage(enemyName + " has " + enemyHealth + " health remaining.");
-            gameDisplay.printMessage(currentPlayer + " has " + playerHealth + " health remaining.");
+
+
+
         }
         }
 
