@@ -23,4 +23,14 @@ class ShaolimWarriorGameTest {
 
         Assert.assertTrue((  alive = true));
     }
+
+    @Test
+    void shaolinWarriorGameStart() {
+    }
+
+    @Test
+    void fightTime() {
+        alive = true;
+        String fight = user
+    }
 }
