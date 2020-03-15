@@ -18,16 +18,18 @@ public class ShaolimWarriorGame {
     private static ConsoleManager gameConsole = new ConsoleManager();
     private static Hero currentPlayer;
 
+    private ShaolimWarriorGame(){}
 
-    public void start(HeroWarehouse characterCollection) {
+    public static void start(HeroWarehouse characterCollection) {
         currentPlayer = characterCollection.getCharacterModelStorage().get(0);
+
         gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
                 "Your master Huang Zongxi has been found slain. \n" +
                 "All signs show that it was the disciples of Wang Shichong. \n" +
                 "You have traveled to Kāimíng to exact your revenge for the the honor of your master \n" +
                 "You enter the enemies dojo." +enemyName + " is knealing in meditation. \n" +
                 "He raises his head. You lock eyes and he rises to fight you.");
-    }
+        }
 
     public void checkGameHealth(){
         if (enemyHealth <= 0) {
