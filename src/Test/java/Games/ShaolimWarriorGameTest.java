@@ -31,6 +31,10 @@ class ShaolimWarriorGameTest {
     @Test
     void fightTime() {
         alive = true;
-        String fight = user
+        String fight =
+    }
+
+    @Test
+    void playerDecision() {
     }
 }

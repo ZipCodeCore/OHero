@@ -37,7 +37,7 @@ public class ShaolimWarriorGame {
         return yesOrNo.equalsIgnoreCase("yes");
     }
 
-
+    public void playerDecision(){}
 
         public void fightTime(){
         }
