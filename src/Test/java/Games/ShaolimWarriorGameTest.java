@@ -3,6 +3,7 @@ package Games;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
+import output.Display;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,10 +32,16 @@ class ShaolimWarriorGameTest {
     @Test
     void fightTime() {
         alive = true;
-        String fight =
+        //String fight = null;
     }
 
     @Test
     void playerDecision() {
+        //when
+        Display gameDisplay = new Display();
+        gameDisplay.printMessage("\"What would you like to do? (a)punch (b)kick (c)use weapon: ");
+        //given
+       // String playerAction = gameDisplay;
+        //then
     }
 }
