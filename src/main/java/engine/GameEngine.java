@@ -1,6 +1,7 @@
 package engine;
 
 import games.Blizzard;
+import games.NinjaTurtles;
 import input.ConsoleManager;
 import models.characters.Hero;
 import models.utility.HeroWarehouse;
@@ -84,7 +85,10 @@ Hero currentPlayer = characterCollection.getCharacterModelStorage().get(0);
         }
     }
 
-    private Boolean yesOrNoCheck(String yesOrNo) {
+
+
+
+    private Boolean yesOrNoCheck(String yesOrNo){
         return yesOrNo.equalsIgnoreCase("yes");
     }
     // start here
@@ -104,6 +108,7 @@ Hero currentPlayer = characterCollection.getCharacterModelStorage().get(0);
             switch (choice) {
                 case "1":
                     gameDisplay.printMessage("You are now in the sewer!");
+                    NinjaTurtles.start(characterCollection);
                     break;
                 case "2":
                     gameDisplay.printMessage("Look for cover, a blizzard is coming!");
