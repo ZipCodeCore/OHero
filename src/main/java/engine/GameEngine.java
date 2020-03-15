@@ -2,6 +2,7 @@ package engine;
 
 import games.Blizzard;
 import games.NinjaTurtles;
+import games.ShaolimWarriorGame;
 import input.ConsoleManager;
 import models.characters.Hero;
 import models.utility.HeroWarehouse;
@@ -116,6 +117,7 @@ Hero currentPlayer = characterCollection.getCharacterModelStorage().get(0);
                     break;
                 case "3":
                     gameDisplay.printMessage("Welcome to the dojo!");
+                    ShaolimWarriorGame.start(characterCollection);
                     break;
                 case "4":
                     gameDisplay.printMessage("Thank you have a nice day");
