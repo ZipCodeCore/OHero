@@ -1,6 +1,7 @@
 package engine;
 
 import games.Blizzard;
+import games.NinjaTurtles;
 import input.ConsoleManager;
 import models.characters.Hero;
 import models.utility.HeroWarehouse;
@@ -109,6 +110,7 @@ public class GameEngine {
             switch (choice) {
                 case "1":
                     gameDisplay.printMessage("You are now in the sewer!");
+                    NinjaTurtles.start(characterCollection);
                     break;
                 case "2":
                     gameDisplay.printMessage("Look for cover, a blizzard is coming!");
