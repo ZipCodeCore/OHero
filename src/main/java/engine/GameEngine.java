@@ -38,12 +38,7 @@ public class GameEngine {
     }
 
     public void startingStats() {
-//        gameDisplay.printMessage("If this weren't a lazy demo, you would select your starting stats here! \n" +
-//                "Consider having the player start from archetypes rather than choosing individual stats! \n" +
-//                "Also, look into the relationship between the Stats and CharacterModel class to understand how that could be managed. \n" +
-//                "An example would be allowing the user to input 'Bruiser' and giving them high Health and Strength stats! \n" +
-//                "Use your imagination! Remember: Design and write tests FIRST! Understand what you need to get the job done.");
-        Hero currentPlayer = characterCollection.getCharacterModelStorage().get(0);
+Hero currentPlayer = characterCollection.getCharacterModelStorage().get(0);
 
         gameDisplay.printMessage("\n" + currentPlayer.getName() + "'s Stats are:");
 
@@ -62,6 +57,7 @@ public class GameEngine {
         characterCollection.getCharacterModelStorage().get(0).getStats().setHealth(100);
         gameDisplay.printMessage("Health = " + currentPlayer.getStats().getHealth());
 
+
         //That's a lot of repetitive code. Do this better!
         //You'll also note that arbitrary values can be input here - the player could make themselves impossibly strong!
         //Apply better code practices and constraints to keep both of these terrible things from happening!
@@ -69,6 +65,7 @@ public class GameEngine {
 
     public void bagCheck() {
         gameDisplay.printMessage( "\nYou've got stats now. You don't have anything in your inventory. You'll be fine. \n" +
+
                 "But why not revel in how broke you are? Do you want to check your inventory?");
 
         gameDisplay.printMessage("[Enter YES or NO]");
@@ -94,6 +91,7 @@ public class GameEngine {
 
 
     public void encounter() {
+
         gameDisplay.printMessage("\nYou have three game choices! \n" +
                 "1: Head to the sewers. \n" +
                 "2: Exit the building into the snow storm. \n" +
@@ -125,4 +123,5 @@ public class GameEngine {
             }
         }
     }
+
 

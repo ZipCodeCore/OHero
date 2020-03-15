@@ -7,6 +7,7 @@ public class ConsoleManager {
     private Scanner playerConsoleInput;
 
     public ConsoleManager() {
+
         this.playerConsoleInput = new Scanner(System.in);
     }
 

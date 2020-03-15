@@ -8,7 +8,7 @@ public class Main {
         newGame.gameStart();
         newGame.nameAndStoreHero();
         newGame.startingStats();
-        //newGame.bagCheck();
+        newGame.bagCheck();
         newGame.encounter();
     }
 
