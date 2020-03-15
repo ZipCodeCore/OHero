@@ -19,7 +19,7 @@ public class ShaolimWarriorGame {
     private static Hero currentPlayer;
 
 
-    public void ShaolinWarriorGameStart(HeroWarehouse characterCollection) {
+    public void start(HeroWarehouse characterCollection) {
         currentPlayer = characterCollection.getCharacterModelStorage().get(0);
         gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
                 "Your master Huang Zongxi has been found slain. \n" +
