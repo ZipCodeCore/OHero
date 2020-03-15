@@ -1,20 +1,26 @@
-package Games;
+package games;
 
+import input.ConsoleManager;
+import models.characters.Hero;
 import models.items.Item;
+import models.utility.HeroWarehouse;
 import output.Display;
 
 public class ShaolimWarriorGame {
-    private int enemyHealth = 100;
-    private String enemyName;
-    private double enemyMoveChoice = Math.ceil(Math.random()*3);
-    private String playerName = "playerHero.getName()";
-    private int playerHealth;
-    private boolean alive = false;
-    private Display gameDisplay = new Display();
-    private Item scroll;
+    private static int enemyHealth = 100;
+    private static String enemyName;
+    private static double enemyMoveChoice = Math.ceil(Math.random()*3);
+    private static String playerName = "playerHero.getName()";
+    private static int playerHealth;
+    private static boolean alive = false;
+    private static Display gameDisplay = new Display();
+    private static Item scroll;
+    private static ConsoleManager gameConsole = new ConsoleManager();
+    private static Hero currentPlayer;
 
 
-    public void ShaolinWarriorGameStart() {
+    public void ShaolinWarriorGameStart(HeroWarehouse characterCollection) {
+        currentPlayer = characterCollection.getCharacterModelStorage().get(0);
         gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
                 "Your master Huang Zongxi has been found slain. \n" +
                 "All signs show that it was the disciples of Wang Shichong. \n" +
