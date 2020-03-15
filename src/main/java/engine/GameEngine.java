@@ -23,7 +23,7 @@ public class GameEngine {
 
     public void nameAndStoreHero() {
 
-        playerHero = new Hero(gameConsole.playerInput());
+        playerHero = new Hero(gameConsole.playerInput(), characterCollection);
         characterCollection.getCharacterModelStorage().add(playerHero);
         playerHero.setId((long) characterCollection.getCharacterModelStorage().indexOf(playerHero));
         //Something is up with this ID creation. What's wrong with it? Could you optimize it?

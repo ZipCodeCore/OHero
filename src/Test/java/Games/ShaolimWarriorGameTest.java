@@ -22,7 +22,7 @@ class ShaolimWarriorGameTest {
         else if (playerHealth <= 0)
             alive = false;
 
-        Assert.assertTrue((  alive = true));
+        Assert.assertTrue(( alive = true));
     }
 
     @Test

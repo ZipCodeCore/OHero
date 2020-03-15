@@ -1,12 +1,14 @@
 package models.characters;
 
+import models.utility.HeroWarehouse;
 import models.utility.Inventory;
 
 public class Hero extends CharacterModel {
 
     private Inventory heroInventory;
 
-    public Hero( String characterName) {
+
+    public Hero(String characterName, HeroWarehouse characterModelStorage) {
         super(characterName);
         this.heroInventory = new Inventory();
     }
@@ -18,5 +20,9 @@ public class Hero extends CharacterModel {
     public void setHeroInventory(Inventory heroInventory) {
         this.heroInventory = heroInventory;
     }
+
+
+
+
 
 }

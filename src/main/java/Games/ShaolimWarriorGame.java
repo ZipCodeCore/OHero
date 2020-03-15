@@ -8,15 +8,16 @@ import output.Display;
 
 public class ShaolimWarriorGame {
     private static int enemyHealth = 100;
-    private static String enemyName;
+    private static String enemyName = "Bolo";
     private static double enemyMoveChoice = Math.ceil(Math.random()*3);
     private static String playerName = "playerHero.getName()";
-    private static int playerHealth;
+    private static int playerHealth = 0;
     private static boolean alive = false;
     private static Display gameDisplay = new Display();
     private static Item scroll;
     private static ConsoleManager gameConsole = new ConsoleManager();
     private static Hero currentPlayer;
+
 
     private ShaolimWarriorGame(){}
 
@@ -32,11 +33,12 @@ public class ShaolimWarriorGame {
         }
 
     public void checkGameHealth(){
+        playerHealth = currentPlayer.getStats().getHealth();
         if (enemyHealth <= 0) {
-            gameDisplay.printMessage("Your training was tested and you chi is strong, " + playerName + " you have defeated " + enemyName + ".\n" + "This battle is over but there are more who must answer for your masters betrayal ");
+            gameDisplay.printMessage("Your training was tested and you chi is strong, " + currentPlayer + " you have defeated " + enemyName + ".\n" + "This battle is over but there are more who must answer for your masters betrayal ");
             alive = false;
         } else if (playerHealth <= 0) {
-            gameDisplay.printMessage(playerName + " ,you have failed your master. " + enemyName + "'s chi was stronger. Master Huang betrayal will not be avenged by you.");
+            gameDisplay.printMessage(currentPlayer + " ,you have failed your master. " + enemyName + "'s chi was stronger. Master Huang betrayal will not be avenged by you.");
             alive = false;
         }
     }
@@ -48,6 +50,10 @@ public class ShaolimWarriorGame {
     public void playerDecision(){}
 
         public void fightTime(){
+        while (alive){
+            gameDisplay.printMessage(enemyName + " has " + enemyHealth + " health remaining.");
+            gameDisplay.printMessage(currentPlayer + " has " + playerHealth + " health remaining.");
+        }
         }
 
 }

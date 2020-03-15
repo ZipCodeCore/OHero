@@ -18,4 +18,6 @@ public class HeroWarehouse {
     public void setCharacterModelStorage(ArrayList<Hero> characterModelStorage) {
         this.characterModelStorage = characterModelStorage;
     }
+
+
 }
