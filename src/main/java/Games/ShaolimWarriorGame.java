@@ -86,17 +86,13 @@ public class ShaolimWarriorGame {
                             playerHealth -= 10;
                             checkGameHealth();
                             break;
-
-                        default:
-                            gameDisplay.printMessage("PLEASE ENTER a,b, OR c");
-                            break;
                     }
                     break;
                     //enemyChoice = Math.ceil(Math.random() * 3);
                 case "b":
                     switch ((int) enemyChoice) {
                         case 1:
-                            gameDisplay.printMessage(enemyName + " dances by kick");
+                            gameDisplay.printMessage(enemyName + " dances by kick.");
                             checkGameHealth();
                             break;
                         case 2:
@@ -109,8 +105,6 @@ public class ShaolimWarriorGame {
                             playerHealth -= 10;
                             checkGameHealth();
                             break;
-                        default:
-                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
                     }
                     break;
                    // enemyChoice = Math.ceil(Math.random() * 3);
@@ -121,7 +115,7 @@ public class ShaolimWarriorGame {
                             checkGameHealth();
                             break;
                         case 2:
-                            gameDisplay.printMessage(playerName + " your knee doubles" + enemyName + " over.");
+                            gameDisplay.printMessage(playerName + " your knee doubles " + enemyName + " over.");
                             enemyHealth -= 10;
                             checkGameHealth();
                             break;
@@ -130,8 +124,9 @@ public class ShaolimWarriorGame {
                             playerHealth -= 10;
                             checkGameHealth();
                             break;
-                        default:
-                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                default:
+                    gameDisplay.printMessage("PLEASE ENTER a, b, OR c");
+                    break;
                     }
                     break;
 
