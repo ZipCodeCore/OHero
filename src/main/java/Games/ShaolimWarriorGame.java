@@ -21,6 +21,10 @@ public class ShaolimWarriorGame {
 
     private ShaolimWarriorGame(){}
 
+    /**
+     * method for deaths in game
+     */
+
     public static void checkGameHealth(){
         //playerHealth = currentPlayer.getStats().getHealth();
         if (enemyHealth <= 0) {
@@ -33,6 +37,9 @@ public class ShaolimWarriorGame {
     }
 
     public static void start(HeroWarehouse characterCollection) {
+        /**
+         * games as on as long as player is alive
+         */
         currentPlayer = characterCollection.getCharacterModelStorage().get(0);
         playerName = currentPlayer.getName();
         playerHealth = currentPlayer.getStats().getHealth();
@@ -55,7 +62,11 @@ public class ShaolimWarriorGame {
 
             double enemyChoice = Math.ceil(Math.random() * 3);
             checkGameHealth();
-
+            /**
+             * switch statement takes the players choices a,b,c and
+             * compares to random generated enemy choice should
+             * create six different occurrences of responses
+             */
 
             switch (playerFightChoice) {
                 case "a" :
@@ -77,7 +88,8 @@ public class ShaolimWarriorGame {
                             break;
 
                         default:
-                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                            gameDisplay.printMessage("PLEASE ENTER a,b, OR c");
+                            break;
                     }
                     //enemyChoice = Math.ceil(Math.random() * 3);
                 case "b":
