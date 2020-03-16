@@ -34,6 +34,8 @@ public class ShaolimWarriorGame {
 
     public static void start(HeroWarehouse characterCollection) {
         currentPlayer = characterCollection.getCharacterModelStorage().get(0);
+        playerHealth = currentPlayer.getStats().getHealth();
+        playerName = currentPlayer.getName();
 
             gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
                     "Your master Huang Zongxi has been found slain. \n" +
@@ -45,8 +47,7 @@ public class ShaolimWarriorGame {
             alive = true;
         while (alive) {
 
-            playerHealth = currentPlayer.getStats().getHealth();
-            playerName = currentPlayer.getName();
+
             gameDisplay.printMessage(enemyName + " has " + enemyHealth + " health remaining.");
             gameDisplay.printMessage(playerName + " has " + playerHealth + " health remaining.");
 
