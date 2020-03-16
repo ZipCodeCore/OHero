@@ -21,22 +21,7 @@ public class ShaolimWarriorGame {
 
     private ShaolimWarriorGame(){}
 
-    public static void start(HeroWarehouse characterCollection) {
-        currentPlayer = characterCollection.getCharacterModelStorage().get(0);
-
-        gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
-                "Your master Huang Zongxi has been found slain. \n" +
-                "All signs show that it was the disciples of Wang Shichong. \n" +
-                "You have traveled to Kāimíng to exact your revenge for the the honor of your master \n" +
-                "You enter the enemies dojo." +enemyName + " is knealing in meditation. \n" +
-                "He raises his head. You lock eyes and he rises to fight you.");
-        playerHealth = currentPlayer.getStats().getHealth();
-        playerName = currentPlayer.getName();
-        gameDisplay.printMessage(enemyName + " has " + enemyHealth + " health remaining.");
-        gameDisplay.printMessage(playerName + " has " + playerHealth + " health remaining.");
-        }
-
-    public void checkGameHealth(){
+    public static void checkGameHealth(){
         playerHealth = currentPlayer.getStats().getHealth();
         if (enemyHealth <= 0) {
             gameDisplay.printMessage("Your training was tested and you chi is strong, " + currentPlayer + " you have defeated " + enemyName + ".\n" + "This battle is over but there are more who must answer for your masters betrayal ");
@@ -47,19 +32,94 @@ public class ShaolimWarriorGame {
         }
     }
 
-    private Boolean yesOrNoCheck(String yesOrNo) {
-        return yesOrNo.equalsIgnoreCase("yes");
+    public static void start(HeroWarehouse characterCollection) {
+        currentPlayer = characterCollection.getCharacterModelStorage().get(0);
+
+            gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
+                    "Your master Huang Zongxi has been found slain. \n" +
+                    "All signs show that it was the disciples of Wang Shichong. \n" +
+                    "You have traveled to Kāimíng to exact your revenge for the the honor of your master \n" +
+                    "You enter the enemies dojo." + enemyName + " is knealing in meditation. \n" +
+                    "He raises his head. You lock eyes and he rises to fight you.");
+            playerHealth = currentPlayer.getStats().getHealth();
+            playerName = currentPlayer.getName();
+            gameDisplay.printMessage(enemyName + " has " + enemyHealth + " health remaining.");
+            gameDisplay.printMessage(playerName + " has " + playerHealth + " health remaining.");
+            alive = true;
+        while (alive) {
+
+            gameDisplay.printMessage("What would you like to do? (a)punch (b)kick (c)knee strike: ");
+            String action = gameConsole.playerInput();
+
+            double enemyChoice = Math.ceil(Math.random() * 3);
+            checkGameHealth();
+
+
+            switch (action) {
+                case "a":
+                    switch ((int) enemyChoice) {
+                        case 1:
+                            gameDisplay.printMessage(enemyName + " side steps your punch." + enemyName + " is faster than you thought");
+                            checkGameHealth();
+                            break;
+                        case 2:
+                            gameDisplay.printMessage(playerName + " lands a solid punch to " + enemyName + "'s ribs.");
+                            enemyHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        case 3:
+                            gameDisplay.printMessage(enemyName + " sidesteps and counters with kick into " + playerName + ".");
+                            playerHealth -= 10;
+                            checkGameHealth();
+                            break;
+
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                    }
+                    enemyChoice = Math.ceil(Math.random() * 3);
+                case "b":
+                    switch ((int) enemyChoice) {
+                        case 1:
+                            gameDisplay.printMessage(enemyName + " dances by kick");
+                            checkGameHealth();
+                            break;
+                        case 2:
+                            gameDisplay.printMessage(playerName + " your kick doubles " + enemyName + " over.");
+                            enemyHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        case 3:
+                            gameDisplay.printMessage(enemyName + " jumps back from your kick. And counters with a punch to " + playerName + "'s ribs.'");
+                            playerHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                    }
+                    enemyChoice = Math.ceil(Math.random() * 3);
+                case "c":
+                    switch ((int) enemyChoice) {
+                        case 1:
+                            gameDisplay.printMessage(enemyName + " laughs at your missed knee attack.");
+                            checkGameHealth();
+                            break;
+                        case 2:
+                            gameDisplay.printMessage(playerName + " your knee doubles" + enemyName + " over.");
+                            enemyHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        case 3:
+                            gameDisplay.printMessage(enemyName + " evades your knee and lands a glancing blow to your face.");
+                            playerHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                    }
+
+            }
+
+        }
     }
-
-    public void playerDecision(){}
-
-        public void fightTime(){
-        while (alive){
-            System.out.println("What would you like to do? (a)upper cut (b)side punch (c)down cut: ");
-
-
-
-        }
-        }
 
 }
