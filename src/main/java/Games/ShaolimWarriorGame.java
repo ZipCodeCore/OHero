@@ -91,6 +91,7 @@ public class ShaolimWarriorGame {
                             gameDisplay.printMessage("PLEASE ENTER a,b, OR c");
                             break;
                     }
+                    break;
                     //enemyChoice = Math.ceil(Math.random() * 3);
                 case "b":
                     switch ((int) enemyChoice) {
@@ -111,6 +112,7 @@ public class ShaolimWarriorGame {
                         default:
                             throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
                     }
+                    break;
                    // enemyChoice = Math.ceil(Math.random() * 3);
                 case "c":
                     switch ((int) enemyChoice) {
@@ -131,6 +133,7 @@ public class ShaolimWarriorGame {
                         default:
                             throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
                     }
+                    break;
 
             }
 
