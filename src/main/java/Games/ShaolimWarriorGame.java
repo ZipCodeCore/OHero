@@ -55,6 +55,7 @@ public class ShaolimWarriorGame {
 
         public void fightTime(){
         while (alive){
+            System.out.println("What would you like to do? (a)upper cut (b)side punch (c)down cut: ");
 
 
 

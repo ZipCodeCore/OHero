@@ -1,5 +1,6 @@
 package Games;
 
+import models.characters.Hero;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -15,14 +16,20 @@ class ShaolimWarriorGameTest {
     private static boolean alive = false;
 
 
+
+
+
     @Test
-    void checkGameHealth() {
+    void checkGameHealth(int playerHealth) {
+
         if(enemyHealth <= 0)
             alive = false;
-        else if (playerHealth <= 0)
+        else if (ShaolimWarriorGameTest.playerHealth <= 0)
             alive = false;
 
-        Assert.assertTrue(( alive = true));
+        checkGameHealth(playerHealth);
+
+
     }
 
     @Test
@@ -37,11 +44,6 @@ class ShaolimWarriorGameTest {
 
     @Test
     void playerDecision() {
-        //when
-        Display gameDisplay = new Display();
-        gameDisplay.printMessage("\"What would you like to do? (a)punch (b)kick (c)use weapon: ");
-        //given
-       // String playerAction = gameDisplay;
-        //then
+
     }
 }
