@@ -24,10 +24,10 @@ public class ShaolimWarriorGame {
     public static void checkGameHealth(){
         //playerHealth = currentPlayer.getStats().getHealth();
         if (enemyHealth <= 0) {
-            gameDisplay.printMessage("Your training was tested and you chi is strong, " + currentPlayer + " you have defeated " + enemyName + ".\n" + "This battle is over but there are more who must answer for your masters betrayal ");
+            gameDisplay.printMessage("Your training was tested and you chi is strong, " + playerName + " you have defeated " + enemyName + ".\n" + "This battle is over but there are more who must answer for your masters betrayal ");
             alive = false;
         } else if (playerHealth <= 0) {
-            gameDisplay.printMessage(currentPlayer + " ,you have failed your master. " + enemyName + "'s chi was stronger. Master Huang betrayal will not be avenged by you.");
+            gameDisplay.printMessage(playerName + " ,you have failed your master. " + enemyName + "'s chi was stronger. Master Huang betrayal will not be avenged by you.");
             alive = false;
         }
     }
@@ -51,13 +51,13 @@ public class ShaolimWarriorGame {
             gameDisplay.printMessage(playerName + " has " + playerHealth + " health remaining.");
 
             gameDisplay.printMessage("What would you like to do? (a)punch (b)kick (c)knee strike: ");
-            String action = gameConsole.playerInput();
+            String playerFightChoice = gameConsole.playerInput();
 
             double enemyChoice = Math.ceil(Math.random() * 3);
             checkGameHealth();
 
 
-            switch (action) {
+            switch (playerFightChoice) {
                 case "a" :
                     switch ((int) enemyChoice) {
                         case 1:
@@ -79,46 +79,46 @@ public class ShaolimWarriorGame {
                         default:
                             throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
                     }
-//                    enemyChoice = Math.ceil(Math.random() * 3);
-//                case "b":
-//                    switch ((int) enemyChoice) {
-//                        case 1:
-//                            gameDisplay.printMessage(enemyName + " dances by kick");
-//                            checkGameHealth();
-//                            break;
-//                        case 2:
-//                            gameDisplay.printMessage(playerName + " your kick doubles " + enemyName + " over.");
-//                            enemyHealth -= 10;
-//                            checkGameHealth();
-//                            break;
-//                        case 3:
-//                            gameDisplay.printMessage(enemyName + " jumps back from your kick. And counters with a punch to " + playerName + "'s ribs.'");
-//                            playerHealth -= 10;
-//                            checkGameHealth();
-//                            break;
-//                        default:
-//                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
-//                    }
-//                    enemyChoice = Math.ceil(Math.random() * 3);
-//                case "c":
-//                    switch ((int) enemyChoice) {
-//                        case 1:
-//                            gameDisplay.printMessage(enemyName + " laughs at your missed knee attack.");
-//                            checkGameHealth();
-//                            break;
-//                        case 2:
-//                            gameDisplay.printMessage(playerName + " your knee doubles" + enemyName + " over.");
-//                            enemyHealth -= 10;
-//                            checkGameHealth();
-//                            break;
-//                        case 3:
-//                            gameDisplay.printMessage(enemyName + " evades your knee and lands a glancing blow to your face.");
-//                            playerHealth -= 10;
-//                            checkGameHealth();
-//                            break;
-//                        default:
-//                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
-//                    }
+                    //enemyChoice = Math.ceil(Math.random() * 3);
+                case "b":
+                    switch ((int) enemyChoice) {
+                        case 1:
+                            gameDisplay.printMessage(enemyName + " dances by kick");
+                            checkGameHealth();
+                            break;
+                        case 2:
+                            gameDisplay.printMessage(playerName + " your kick doubles " + enemyName + " over.");
+                            enemyHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        case 3:
+                            gameDisplay.printMessage(enemyName + " jumps back from your kick. And counters with a punch to " + playerName + "'s ribs.'");
+                            playerHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                    }
+                   // enemyChoice = Math.ceil(Math.random() * 3);
+                case "c":
+                    switch ((int) enemyChoice) {
+                        case 1:
+                            gameDisplay.printMessage(enemyName + " laughs at your missed knee attack.");
+                            checkGameHealth();
+                            break;
+                        case 2:
+                            gameDisplay.printMessage(playerName + " your knee doubles" + enemyName + " over.");
+                            enemyHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        case 3:
+                            gameDisplay.printMessage(enemyName + " evades your knee and lands a glancing blow to your face.");
+                            playerHealth -= 10;
+                            checkGameHealth();
+                            break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + (int) enemyChoice);
+                    }
 
             }
 
