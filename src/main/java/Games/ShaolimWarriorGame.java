@@ -22,7 +22,7 @@ public class ShaolimWarriorGame {
     private ShaolimWarriorGame(){}
 
     public static void checkGameHealth(){
-        playerHealth = currentPlayer.getStats().getHealth();
+        //playerHealth = currentPlayer.getStats().getHealth();
         if (enemyHealth <= 0) {
             gameDisplay.printMessage("Your training was tested and you chi is strong, " + currentPlayer + " you have defeated " + enemyName + ".\n" + "This battle is over but there are more who must answer for your masters betrayal ");
             alive = false;
@@ -34,9 +34,8 @@ public class ShaolimWarriorGame {
 
     public static void start(HeroWarehouse characterCollection) {
         currentPlayer = characterCollection.getCharacterModelStorage().get(0);
-        playerHealth = currentPlayer.getStats().getHealth();
         playerName = currentPlayer.getName();
-
+        playerHealth = currentPlayer.getStats().getHealth();
             gameDisplay.printMessage("There has been a travesty at the Shoalin monastery. \n" +
                     "Your master Huang Zongxi has been found slain. \n" +
                     "All signs show that it was the disciples of Wang Shichong. \n" +
@@ -67,6 +66,7 @@ public class ShaolimWarriorGame {
                             break;
                         case 2:
                             gameDisplay.printMessage(playerName + " lands a solid punch to " + enemyName + "'s ribs.");
+
                             enemyHealth -= 10;
                             checkGameHealth();
                             break;
