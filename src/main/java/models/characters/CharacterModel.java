@@ -28,6 +28,7 @@ public abstract class CharacterModel {
     public void setName(String name) {
         this.name = name;
     }
+
     public Stats getStats() {
         return stats;
     }
